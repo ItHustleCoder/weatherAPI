@@ -12,7 +12,7 @@ class RouteController {
                 res.setHeader('Content-Type', 'application/json').json(query)
             } else {
                 res.status(404);
-                res.end("Cirty was not founded");
+                res.end("City was not founded");
             }
         } catch (e: any) {
             logger.error(e.message);
