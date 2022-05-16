@@ -1,10 +1,10 @@
-### Hi Stranger <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+### Hi, Stranger <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
 
 <a href="https://www.linkedin.com/in/andriy-bohdanit/">
   <img align="left" alt="Andriy Bohdan" width="32px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
 </a><br/><br/>
 
-### Initial Setup :relaxed:
+### Let's start :relaxed:
 
 ![](https://giphy.com/embed/5xtDarlj20kaZg9BfgY")
 
@@ -23,58 +23,30 @@
     └── utils
 ```
 
-### Load the dump file back into the server like this:
+### Two ways to test this repository:
 
-Open Terminal in **src/schema/**
+#### The first one using terminal:
 
-if for any reason mysql migration is failed just manually create database **restAPI**
-
-> Unix
+> Open the terminal and run
 
 ```
-mysql restAPI < create_recipes.sql
+  npm install && npm run build
 ```
 
-> The same in the Windows command prompt:
+> Go to the folder dist and run
 
 ```
-cmd.exe /c "mysql -u root -p restAPI < create_recipes.sql"
-```
-
-### Testing API with Postman
-
-> GET
+ cd ./dist node bash.js Turin
 
 ```
-http://localhost:5003/recipes
-```
+
+#### The second one using Postman:
 
 > POST
 
 ```
-http://localhost:5003/recipes
+http://localhost:5003/
 
-Example raw body: {"name": "Test", "ingredients": ["test1", "test2", "test3"], "image": null}
-```
-
-> PUT
-
-```
-http://localhost:5003/recipes/1
-
-```
-
-> PATCH
-
-```
-http://localhost:5003/recipes/1
-
-Example raw body: {"ingredients": ["path1", "path2"]}
-
-```
-
-> DELETE
-
-```
-http://localhost:5003/recipes/1
+Example: Type: JSON, Raw: body: {"city": "Turin"}
+Should return JSON object with information about city
 ```
